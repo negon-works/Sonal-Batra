@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sonal Batra - Lifestyle & Wellness Coach</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  
+</head>
+<body class="js-enabled">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="site-title-container">
+        <h1 class="site-title">Sonal Batra</h1>
+        <p class="subtitle">Lifestyle & Wellness Coach</p>
+      </div>
+      <nav class="nav" id="nav">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#photos" class="nav-link">Photos</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container about-container">
+      <img
+        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+        alt="Sonal Batra"
+        class="about-img"
+      />
+      <div class="about-text">
+        <h2>About Sonal</h2>
+        <p>
+          Sonal Batra is a passionate Lifestyle and Wellness Coach dedicated to
+          empowering individuals to live balanced, healthy, and fulfilling lives.
+          Through personalized coaching and guidance, she helps clients find
+          harmony in mind, body, and spirit.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photos Section -->
+  <section class="photos" id="photos">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img
+          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+          alt="Healthy Lifestyle"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
+          alt="Wellness Meditation"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+          alt="Outdoor Yoga"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80"
+          alt="Lifestyle Coach"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <div class="testimonial-cards">
+        <blockquote>
+          “Sonal’s coaching transformed my life! Her advice is practical,
+          inspiring, and always uplifting.”
+          <cite>— Anjali K.</cite>
+        </blockquote>
+        <blockquote>
+          “Thanks to Sonal, I feel more balanced and confident in my daily
+          routine.”
+          <cite>— Rohit S.</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <form class="contact-form" action="#" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your message here..." rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer / Socials -->
+  <footer class="footer" id="footer">
+    <div class="social-container">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-link">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://pinterest.com" target="_blank" aria-label="Pinterest" class="social-link">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+
+    <p class="footer-text">© 2025 Sonal Batra</p>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('js-enabled');
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+      hamburger.classList.toggle('is-active');
+    });
+
+    // Close nav when clicking a link (on mobile)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if(nav.classList.contains('nav-open')) {
+          nav.classList.remove('nav-open');
+          hamburger.classList.remove('is-active');
+        }
+      });
+    });
+
+  </script>
+
+</body>
+</html>

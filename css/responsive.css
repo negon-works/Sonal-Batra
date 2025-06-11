@@ -1,0 +1,80 @@
+/* Responsive Styles */
+
+/* Mobile first */
+
+@media (max-width: 768px) {
+
+  /* Header container */
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  /* Hide nav links by default on mobile */
+.nav {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  background: #f6f1ed;
+  height: calc(100% - 70px);
+  width: 70%;
+  max-width: 280px;
+  transform: translateX(100%);
+  /* No transition initially */
+  transition: none;
+  box-shadow: -4px 0 10px rgba(122, 106, 89, 0.1);
+  flex-direction: column;
+  padding-top: 2rem;
+  z-index: 1050;
+}
+
+/* Enable transition only when js-enabled */
+.js-enabled .nav {
+  transition: transform 0.3s ease;
+}
+
+/* When nav open */
+.nav.nav-open {
+  transform: translateX(0);
+}
+
+/* Nav links in column */
+.nav-links {
+  flex-direction: column;
+  gap: 1.8rem;
+  padding-left: 1.5rem;
+}
+
+/* Hamburger visible */
+.hamburger {
+  display: flex !important;
+}
+
+
+  /* Adjust About section */
+  .about-container {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .about-img {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Testimonials */
+  .testimonial-cards {
+    gap: 1.5rem;
+  }
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+/* Larger tablets */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-container {
+    gap: 2rem;
+  }
+}
