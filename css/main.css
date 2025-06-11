@@ -126,7 +126,9 @@ body {
 }
 
 /* About Section */
-
+.about{
+  hiegh:100vh
+}
 .about-container {
   display: flex;
   gap: 2.5rem;
