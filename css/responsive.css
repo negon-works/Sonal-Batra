@@ -66,6 +66,11 @@
   .testimonial-cards {
     gap: 1.5rem;
   }
+
+  /* Photos grid to 1 column */
+  .gallery {
+    grid-template-columns: 1fr;
+  }
   .contact-form {
     max-width: 100%;
   }
